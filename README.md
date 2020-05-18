@@ -5,9 +5,9 @@ A Spring Boot project that includes basic unit testing on REST services.
 
 Plan, design and develop at least three unit tests for each one of the following operations on Courses. No REST services implementation is needed at this moment, just the unit test cases.
 
-1. When client asks for the list of courses you must validate that service returns less than 101 records (do not include students information), otherwise it must return UMGTooManyRowsException with error message like "There are more than one hundred records in the repository."; You must use getForEntity operation from your test rest template object. Service path must be "/course/getAll".
+1. When client asks for the list of courses you must validate that service returns less than 101 records (do not include students information), otherwise it must return UMGTooManyRowsException with error message like "There are more than one hundred records in the repository."; You must use getForEntity operation from your test rest template object. Service path must be "/course/getAll". Use assert functions specific for exceptions.
 
-2. Given the following list of course names you must ensure that an array of String containing the top ten course names returned by service "/course/top/10/sed" ordered by name ASC match the given list. In the provided path, "10" is the ammount of records that must be returned for this specific case but it can be any number.
+2. Given the following list of course names you must ensure that an array of String containing the top ten course names returned by service "/course/top/10/sed" ordered by name ASC match the given list. In the provided path, "10" is the ammount of records that must be returned for this specific case but it can be any number. Please use assert functions specific for arrays.
 
 ```sh
 Sed a molestias et rem reiciendis.
