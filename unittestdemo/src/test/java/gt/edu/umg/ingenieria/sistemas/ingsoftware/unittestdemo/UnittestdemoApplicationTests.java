@@ -26,25 +26,19 @@ public class UnittestdemoApplicationTests {
         
          @Autowired
     private CurseController theController;
-    private T2Course getAllCourses;
+    
          
          @Test
-    public void test1() throws RecordNotFoundException {
+    public void test1()  {
         //given
         final Integer max = 100;
-        final 
-        //when
-        final T2Course all = this.getAllCourses;
-        final Integer conteo = count.all;
-        if (conteo > max){
         
-        throw RecordNotFoundException (UMGTooManyRowsException)}
+        //when
+        
         
         
         //then
-        assertThat(actual.getIdStudent()).isEqualTo(expected.getIdStudent());
-        assertThat(actual.getName()).isEqualTo(expected.getName());
-        assertThat(actual.getSurname()).isEqualTo(expected.getSurname());
+        
     }
     
 

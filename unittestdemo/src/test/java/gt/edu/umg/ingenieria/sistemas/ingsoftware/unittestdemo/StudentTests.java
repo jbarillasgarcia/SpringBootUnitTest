@@ -5,10 +5,12 @@ import gt.edu.umg.ingenieria.sistemas.ingsoftware.unittestdemo.model.T2Student;
 import java.util.Date;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.ResponseEntity;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class StudentTests {
@@ -39,14 +41,18 @@ public class StudentTests {
         expected.setAddress2("71032-4490");
         
         //when
-        final T2Student actual = this.testRestTemplate.getForObject(
+        final ResponseEntity res = this.testRestTemplate.getForEntity(String.format("http://localhost:%d/student/getAll", this.port), T2Student.class);
+        /*final T2Student actual = this.testRestTemplate.getForObject(
                 String.format("http://localhost:%d/student/getById?id=%d", this.port, theId), 
-                T2Student.class);
+                T2Student.class);*/
         
         //then
-        assertThat(actual.getIdStudent()).isEqualTo(expected.getIdStudent());
+       /* assertThat(actual.getIdStudent()).isEqualTo(expected.getIdStudent());
         assertThat(actual.getName()).isEqualTo(expected.getName());
-        assertThat(actual.getSurname()).isEqualTo(expected.getSurname());
+        assertThat(actual.getSurname()).isEqualTo(expected.getSurname());*/
+       
+       Assertions.assertEquals(200,res.getStatusCodeValue());
+       Assertions.assertEquals(200,res.getStatusCode().value());
     }
     
 }
