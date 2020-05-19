@@ -2,8 +2,7 @@ HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
-**/src/test/java/gt/edu/umg/ingenieria/sistemas/ingsoftware/unittestdemo/DefaultTests.java
-**/src/test/java/gt/edu/umg/ingenieria/sistemas/ingsoftware/unittestdemo/StudentTests.java
+!**/src/test/**
 
 ### STS ###
 .apt_generated
