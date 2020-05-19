@@ -11,5 +11,10 @@ class UnittestdemoApplicationTests {
 	public void contextLoads() {
             
 	}
+        
+        @Test
+	public void test1() {
+            
+	}
 
 }
