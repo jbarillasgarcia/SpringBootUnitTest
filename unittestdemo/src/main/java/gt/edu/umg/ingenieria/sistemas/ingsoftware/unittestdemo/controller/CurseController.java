@@ -5,10 +5,15 @@
  */
 package gt.edu.umg.ingenieria.sistemas.ingsoftware.unittestdemo.controller;
 
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  *
  * @author diegoovalle
  */
+@RestController
 public class CurseController {
     
+    
+   
 }
