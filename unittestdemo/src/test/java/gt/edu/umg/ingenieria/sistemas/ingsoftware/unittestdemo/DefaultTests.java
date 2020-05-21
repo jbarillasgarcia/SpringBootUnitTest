@@ -37,4 +37,21 @@ public class DefaultTests {
         Assertions.assertEquals(actual, expected, "El nombre no coincide");
     }
     
+    @Test
+    public void test2() {
+        //given
+        final String theName = "Maria";
+        final String expected = "Hello Maria";
+        final String actual;
+        
+        //when
+        actual = this.testRestTemplate.getForObject(String.format("http://localhost:%d/default/sayhello?yourName=%s", this.port, theName), String.class);
+        
+        //then
+        assertThat(actual).isEqualTo(expected);
+        assertThat(actual.equals(expected));
+        Assertions.assertEquals(actual, expected, "El nombre no coincide");
+    }
+    
+    
 }
