@@ -55,4 +55,9 @@ public class StudentTests {
        Assertions.assertEquals(200,res.getStatusCode().value());
     }
     
+    
+    @Test
+    public void testExample() {
+    }
+    
 }
