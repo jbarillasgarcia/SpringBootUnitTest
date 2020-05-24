@@ -1,0 +1,7 @@
+Rama:
+
+https://github.com/jbarillasgarcia/SpringBootUnitTest/tree/dgarcia
+
+Comando run: 
+
+docker run -d -p 8086:9090 dlaguardia/ws3
