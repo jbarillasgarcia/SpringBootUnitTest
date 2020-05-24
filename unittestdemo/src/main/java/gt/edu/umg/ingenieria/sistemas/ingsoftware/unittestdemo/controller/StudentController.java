@@ -23,8 +23,8 @@ public class StudentController {
     private StudentService ser;
 
     @GetMapping("/getAll")
-    public List<T2Student> getAll() {
-        return this.ser.getAllStudents();
+    public T2Student getAll() {
+        return this.ser.getAllStudents().get(0);
     }
     
     @GetMapping("/getByNameAndSurname")
